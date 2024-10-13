@@ -10,7 +10,6 @@ x=x/255.0
 model = tf.keras.models.Sequential([tf.keras.layers.Flatten(),
                                     tf.keras.layers.Dense(256, activation='relu'),
                                     tf.keras.layers.Dense(128, activation='sigmoid'),
-                                    tf.keras.layers.Dense(64, activation='sigmoid'),
                                     tf.keras.layers.Dense(10, activation='softmax')
                                     ])
 model.compile(optimizer='adam',
@@ -22,3 +21,4 @@ validation_data=(x,y)
 
 test_loss, test_acc = model.evaluate(x, y)
 print(f'Test accuracy: {test_acc}')
+model.save('Models/model_3_layer.h5')
