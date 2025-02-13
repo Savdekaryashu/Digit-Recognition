@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-#using this we can directly load data into minst
+#using this we can directly load data into minst variable
 minst=tf.keras.datasets.mnist
 
 (X, Y), (x,y) = minst.load_data()
