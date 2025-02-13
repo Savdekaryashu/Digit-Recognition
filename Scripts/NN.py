@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+#using this we can directly load data into minst
 minst=tf.keras.datasets.mnist
 
 (X, Y), (x,y) = minst.load_data()
@@ -21,4 +22,4 @@ validation_data=(x,y)
 
 test_loss, test_acc = model.evaluate(x, y)
 print(f'Test accuracy: {test_acc}')
-model.save('Models/model_3_layer.h5')
+model.save('Models/model_3_layer.h5'
